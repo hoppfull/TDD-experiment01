@@ -30,14 +30,14 @@ namespace App.Tests
         public void SumTest()
         {
             int[] testArray1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-            int actualResult = 0;
+            int expectedResult = 0;
 
             foreach (var item in testArray1)
             {
-                actualResult += item;
+                expectedResult += item;
             }
 
-            Assert.AreEqual(actualResult, App.Program.Sum(testArray1));
+            Assert.AreEqual(expectedResult, App.Program.Sum(testArray1));
 
 
             int[] testArray2 = { -5, -4, -3, -2, -1, 1, 2, 3, 4 };
