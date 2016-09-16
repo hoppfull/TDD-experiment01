@@ -1,10 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using App;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App.Tests
 {
@@ -35,7 +29,27 @@ namespace App.Tests
         [TestMethod()]
         public void SumTest()
         {
-            Assert.Fail();
+            int[] testArray1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+            int actualResult = 0;
+
+            foreach (var item in testArray1)
+            {
+                actualResult += item;
+            }
+
+            Assert.AreEqual(App.Program.Sum(testArray1), actualResult);
+
+
+            int[] testArray2 = { -5, -4, -3, -2, -1, 1, 2, 3, 4 };
+            Assert.AreEqual(App.Program.Sum(testArray2), -5);
+
+            //Empty condition
+            int[] emptyArray = { };
+            Assert.AreEqual(App.Program.Sum(emptyArray), null);
+
+            //Null condition
+            int[] nullArray = null;
+            Assert.AreEqual(App.Program.Sum(nullArray), null);
         }
     }
 }
