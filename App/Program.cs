@@ -25,7 +25,14 @@ namespace App
 
         public static string FizzBuzz(int x)
         {
-            throw new NotImplementedException();
+            if (x % 3 == 0 && x % 5 == 0)
+                return "FizzBuzz";
+            if (x % 3 == 0)
+                return "Fizz";
+            if (x % 5 == 0)
+                return "Buzz";
+            else
+                return x.ToString();
         }
         public static int Sum(int[] xs)
         {

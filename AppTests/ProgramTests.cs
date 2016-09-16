@@ -26,7 +26,10 @@ namespace App.Tests
         [TestMethod()]
         public void FizzBuzzTest()
         {
-            Assert.Fail();
+            Assert.AreEqual("Fizz", Program.FizzBuzz(9));
+            Assert.AreEqual("Buzz", Program.FizzBuzz(20));
+            Assert.AreEqual("FizzBuzz", Program.FizzBuzz(30));
+            Assert.AreEqual("7", Program.FizzBuzz(7));
         }
 
         [TestMethod()]
