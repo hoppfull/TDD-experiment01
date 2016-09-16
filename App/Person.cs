@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace App
 {
-    class Person
+    public class Person
     {
-        
+        public Person()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

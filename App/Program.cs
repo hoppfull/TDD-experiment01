@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 namespace App
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
         }
 
-        static bool CheckAge(Person p|)
+        public static bool CheckAge(Person p)
         {
             throw new NotImplementedException();
         }
 
-        static int[] DoubleAll(int[] xs)
+        public static int[] DoubleAll(int[] xs)
         {
-             throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        static string FizzBuzz(int x)
+        public static string FizzBuzz(int x)
+        {
+            throw new NotImplementedException();
+        }
+        public static int Sum(int[] xs)
         {
             throw new NotImplementedException();
         }
