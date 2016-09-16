@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace App
 {
@@ -24,9 +23,23 @@ namespace App
         {
             throw new NotImplementedException();
         }
-        public static int Sum(int[] xs)
+        public static int? Sum(int[] xs)
         {
-            return xs.Sum();
+            //Null, empty array control
+            if (xs == null || xs.Length == 0)
+            {
+                return null;
+            }
+
+
+            int sum = 0;
+
+            foreach (var item in xs)
+            {
+                sum += item;
+            }
+
+            return sum;
         }
     }
 }
