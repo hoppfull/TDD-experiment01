@@ -37,19 +37,19 @@ namespace App.Tests
                 actualResult += item;
             }
 
-            Assert.AreEqual(App.Program.Sum(testArray1), actualResult);
+            Assert.AreEqual(actualResult, App.Program.Sum(testArray1));
 
 
             int[] testArray2 = { -5, -4, -3, -2, -1, 1, 2, 3, 4 };
-            Assert.AreEqual(App.Program.Sum(testArray2), -5);
+            Assert.AreEqual(-5, App.Program.Sum(testArray2));
 
             //Empty condition
             int[] emptyArray = { };
-            Assert.AreEqual(App.Program.Sum(emptyArray), null);
+            Assert.AreEqual(null, App.Program.Sum(emptyArray));
 
             //Null condition
             int[] nullArray = null;
-            Assert.AreEqual(App.Program.Sum(nullArray), null);
+            Assert.AreEqual(null, App.Program.Sum(nullArray));
         }
     }
 }
