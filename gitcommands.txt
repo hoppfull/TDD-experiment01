@@ -1,0 +1,15 @@
+upload changes:
+	git add --all
+	git status
+	git commit -m "some comment"
+	git push
+
+download changes:
+	git fetch
+	git pull
+
+undo changes:
+	git checkout .
+
+change branch:
+	git checkout somebranch
