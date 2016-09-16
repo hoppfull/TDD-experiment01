@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App
 {
@@ -25,11 +21,32 @@ namespace App
 
         public static string FizzBuzz(int x)
         {
-            throw new NotImplementedException();
+            if (x % 3 == 0 && x % 5 == 0)
+                return "FizzBuzz";
+            if (x % 3 == 0)
+                return "Fizz";
+            if (x % 5 == 0)
+                return "Buzz";
+            else
+                return x.ToString();
         }
-        public static int Sum(int[] xs)
+        public static int? Sum(int[] xs)
         {
-            throw new NotImplementedException();
+            //Null, empty array control
+            if (xs == null || xs.Length == 0)
+            {
+                return null;
+            }
+
+
+            int sum = 0;
+
+            foreach (var item in xs)
+            {
+                sum += item;
+            }
+
+            return sum;
         }
     }
 }
